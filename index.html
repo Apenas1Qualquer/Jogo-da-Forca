@@ -2,10 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <h1>hello vai tomar no cu</h1>
+    <main>
+        <div id="menu" style="display: flex;">
+            <h1 class="typing-text">Jogo da Forca</h1>
+            <ul>
+                <li>
+                    <button onclick="showPage('jogar')">Jogar</button>
+                </li>
+                <li>
+                    <button onclick="showPage('ajuda')">Ajuda</button>
+                </li>
+                <li>
+                    <button onclick="showPage('sobre')">Sobre</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="jogar" style="display: none;">
+            <h1>Jogar</h1>
+        </div>
+
+        <div id="ajuda" style="display: none;">
+            <h1>Ajuda</h1>
+        </div>
+
+        <div id="sobre" style="display: none;">
+            <h1>Sobre</h1>
+            <div class="carousel">
+                <button onclick="carousel('prev')">⟪</button>
+                <div class="carouselContent">
+                    <div id="fabricio" style="display: flex;">
+                        <img src="./public/Fab.jpg" alt="Fabrício">
+                        <h2>Fabrício</h2>
+                        <p>🤵🏼 18 anos</p>
+                        <p>📞 (81) 98265-9006</p>
+                        <p>🧑‍💻 Desenvolvedor</p>
+                        <p>Sou uma pessoa muito versátil e gosto de enfrentar desafios relacionados à programação.</p>
+                    </div>
+                    <div id="diego" style="display: none;">
+                        <img src="./public/diego.png" alt="Diego">
+                        <h2>Diego</h2>
+                        <p>🤵🏼 18 anos</p>
+                        <p>📞 (81) 99263-4577</p>
+                        <p>🧑‍💻 Desenvolvedor</p>
+                        <p>Sou apenas um garoto sonhador.</p>
+                    </div>
+                    <div id="maria" style="display: none;">
+                        <img src="./public/Maria.jpg" alt="Maria">
+                        <h2>Maria</h2>
+                        <p>🤵🏼 23 anos</p>
+                        <p>📞 (81) 98479-7851 </p>
+                        <p>🧑‍💻 Desenvolvedor</p>
+                        <p>Iniciando na programação, apaixonada pela área de desenvolvimento web e enfrentando desafios com entusiasmo.</p>
+                    </div>
+                    <div id="sara" style="display: none;">
+                        <img src="./public/Sara.jpg" alt="Sara">
+                        <h2>Sara</h2>
+                        <p>🤵🏼 17 anos</p>
+                        <p>📞 (81) 98999-4703</p>
+                        <p>🧑‍💻 Desenvolvedor</p>
+                        <p>Iniciando na área de desenvolvimento web, buscando aprender e me preparar para o mercado de trabalho.</p>
+                    </div>
+                    <div id="renato" style="display: none;">
+                        <img src="./public/renato.png" alt="Renato">
+                        <h2>Renato</h2>
+                        <p>🤵🏼 18 anos</p>
+                        <p>📞 (81) 99436-7362</p>
+                        <p>🧑‍💻 Desenvolvedor</p>
+                        <p>Buscando uma oportunidade no mercado de trabalho na área de desenvolvimento de sistemas.</p>
+                    </div>
+                </div>
+                <button onclick="carousel('next')">⟫</button>
+            </div>
+
+            <div class="info">
+                <h2>Curso: Desenvolvimento Web</h2>
+                <h2>Professor: Fábio Fraga</h2>
+                <p>Projeto desenvolvido como requisíto parcial para aprovação do curso de Desenvolvimento Web da Associação Ponto Cidadão</p>
+            </div>
+
+            <button onclick="showPage('menu')" class="backToMenu">Menu</button>
+        </div>
+    </main>
+    <script src="./js/main.js"></script>
 </body>
 </html>
