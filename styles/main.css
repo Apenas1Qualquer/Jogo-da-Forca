@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 body {
-    background: radial-gradient(gray, black);
+    background: radial-gradient(darkgreen, black);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     border: 10px solid rgb(255, 255, 255);
-    font-family: "Quantico", sans-serif;
-    font-weight: 700;
+    font-family: "Fredericka the Great", cursive;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -60,7 +58,7 @@ ul {
 }
 
 ul li button, .backToMenu {
-    background-color: gray;
+    background-color: darkgreen;
     color: white;
     width: 200px;
     height: 50px;
@@ -69,13 +67,13 @@ ul li button, .backToMenu {
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: "Quantico", sans-serif;
-    font-weight: 700;
+    font-family: "Fredericka the Great", cursive;
+    font-weight: 400;
     font-style: normal;
 }
 
 ul li button:hover, .backToMenu:hover {
-    background-color: rgb(61, 61, 61);
+    background-color: #064d06;
     width: 210px;
 }
 
@@ -134,7 +132,7 @@ ul li button:hover, .backToMenu:hover {
 }
 
 .carousel button:hover {
-    color: rgb(61, 61, 61);
+    color: #064d06;
 }
 
 .carouselContent div h2 {
@@ -142,7 +140,7 @@ ul li button:hover, .backToMenu:hover {
 }
 
 .backToMenu {
-margin: 20px 0;
+    margin: 20px 0;
 }
 
 .info {
@@ -156,14 +154,12 @@ margin: 20px 0;
     }
 
     to {
-        width: 23%
+        width: 24%
     }
 }
 
 @keyframes blink-caret {
-
-    from,
-    to {
+    from, to {
         border-color: transparent;
     }
 
