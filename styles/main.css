@@ -98,6 +98,7 @@ ul li button:hover, .backToMenu:hover {
     padding: 10px;
     background-color: white;
     border-radius: 25px;
+    height: 80%;
 }
 
 .carouselContent div {
@@ -154,7 +155,7 @@ ul li button:hover, .backToMenu:hover {
     }
 
     to {
-        width: 24%
+        width: 35%
     }
 }
 
