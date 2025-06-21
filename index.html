@@ -19,15 +19,30 @@
                 <li>
                     <button onclick="showPage('sobre')">Sobre</button>
                 </li>
+                <li>
+                    <button onclick="showPage('opcoes')">Opções</button>
+                </li>
             </ul>
+        </div>
+        <div id="opcoes" style="display: none;">
+            <h1>Opções</h1>
+             <div>
+            <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
+        </div>
         </div>
 
         <div id="jogar" style="display: none;">
             <h1>Jogar</h1>
+             <div>
+            <button onclick="showPage('menu')" class="backToMenu">Sair</button>
+        </div>
         </div>
 
         <div id="ajuda" style="display: none;">
             <h1>Ajuda</h1>
+        <div>
+            <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
+        </div>
         </div>
 
         <div id="sobre" style="display: none;">
@@ -36,42 +51,75 @@
                 <button onclick="carousel('prev')">⟪</button>
                 <div class="carouselContent">
                     <div id="fabricio" style="display: flex;">
-                        <img src="./public/Fab.jpg" alt="Fabrício">
+                        <div class="imgContainer">
+                            <img src="./public/Fab.jpg" alt="Fabrício">
+                        </div>
                         <h2>Fabrício</h2>
                         <p>🤵🏼 18 anos</p>
-                        <p>📞 (81) 98265-9006</p>
+                        <p>
+                            <a href="http://wa.me/5581982659006" target="_blank" rel="noopener">
+                                📞 (81) 98265-9006
+                            </a>
+                        </p>
                         <p>🧑‍💻 Desenvolvedor</p>
                         <p>Sou uma pessoa muito versátil e gosto de enfrentar desafios relacionados à programação.</p>
                     </div>
                     <div id="diego" style="display: none;">
-                        <img src="./public/diego.png" alt="Diego">
+                        <div class="imgContainer">
+                            <img src="./public/diego.png" alt="Diego">
+                        </div>
                         <h2>Diego</h2>
-                        <p>🤵🏼 18 anos</p>
-                        <p>📞 (81) 99263-4577</p>
+                        <p>👦🏾 18 anos</p>
+                        <p>
+                            <a href="http://wa.me/5581992634577" target="_blank" rel="noopener">
+                                📞 (81) 99263-4577
+                            </a>
+                        </p>
                         <p>🧑‍💻 Desenvolvedor</p>
                         <p>Sou apenas um garoto sonhador.</p>
                     </div>
                     <div id="maria" style="display: none;">
-                        <img src="./public/Maria.jpg" alt="Maria">
+                        <div class="imgContainer">
+                            <img src="./public/Maria.jpg" alt="Maria">
+                        </div>
                         <h2>Maria</h2>
-                        <p>🤵🏼 23 anos</p>
-                        <p>📞 (81) 98479-7851 </p>
-                        <p>🧑‍💻 Desenvolvedor</p>
-                        <p>Iniciando na programação, apaixonada pela área de desenvolvimento web e enfrentando desafios com entusiasmo.</p>
+                        <p>👩🏻 23 anos</p>
+                        <p>
+                            <a href="http://wa.me/5581984797851" target="_blank" rel="noopener">
+                                📞 (81) 98479-7851
+                            </a>
+                        </p>
+                        <p>👩‍💻 Desenvolvedora</p>
+                        <p>Iniciando na programação, apaixonada pela área de desenvolvimento web e enfrentando desafios
+                            com entusiasmo.</p>
                     </div>
                     <div id="sara" style="display: none;">
-                        <img src="./public/Sara.jpg" alt="Sara">
+                        <div class="imgContainer">
+                            <img src="./public/Sara.jpg" alt="Sara">
+                        </div>
                         <h2>Sara</h2>
-                        <p>🤵🏼 17 anos</p>
-                        <p>📞 (81) 98999-4703</p>
-                        <p>🧑‍💻 Desenvolvedor</p>
-                        <p>Iniciando na área de desenvolvimento web, buscando aprender e me preparar para o mercado de trabalho.</p>
+                        <p>👩🏾‍🦱 17 anos</p>
+                        <p>
+                            <a href="http://wa.me/5581989994703" target="_blank" rel="noopener">
+                                📞 (81) 98999-4703
+                            </a>
+                        </p>
+                        <p>👩‍💻 Desenvolvedora</p>
+                        <p>Iniciando na área de desenvolvimento web, buscando aprender e me preparar para o mercado de
+                            trabalho.</p>
                     </div>
                     <div id="renato" style="display: none;">
-                        <img src="./public/renato.png" alt="Renato">
+                        <div class="imgContainer">
+
+                            <img src="./public/renato.png" alt="Renato">
+                        </div>
                         <h2>Renato</h2>
-                        <p>🤵🏼 18 anos</p>
-                        <p>📞 (81) 99436-7362</p>
+                        <p>👦🏻 18 anos</p>
+                        <p>
+                            <a href="http://wa.me/5581994367362" target="_blank" rel="noopener">
+                                📞 (81) 99436-7362
+                            </a>
+                        <p>
                         <p>🧑‍💻 Desenvolvedor</p>
                         <p>Buscando uma oportunidade no mercado de trabalho na área de desenvolvimento de sistemas.</p>
                     </div>
@@ -79,13 +127,15 @@
                 <button onclick="carousel('next')">⟫</button>
             </div>
 
-            <div class="info">
+            <div class="info">   
+                <img src="./public/logo-ponto-cidado.png" alt="">
                 <h2>Curso: Desenvolvimento Web</h2>
                 <h2>Professor: Fábio Fraga</h2>
-                <p>Projeto desenvolvido como requisíto parcial para aprovação do curso de Desenvolvimento Web da Associação Ponto Cidadão</p>
+                <p>Projeto desenvolvido como requisíto parcial para aprovação do curso de Desenvolvimento Web da
+                    Associação Ponto Cidadão</p>
             </div>
 
-            <button onclick="showPage('menu')" class="backToMenu">Menu</button>
+            <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
         </div>
     </main>
     <script src="./js/main.js"></script>

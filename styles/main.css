@@ -3,7 +3,6 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 10px solid rgb(255, 255, 255);
     font-family: "Fredericka the Great", cursive;
     font-weight: 400;
     font-style: normal;
@@ -24,12 +23,16 @@ main {
     flex-direction: column;
 }
 
-#ajuda, #sobre, #jogar {
+#ajuda, #sobre, #jogar, #opcoes {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 25%;
     min-height: calc(100vh - 20px);
+}
+
+#sobre {
+    width: 40%;
 }
 
 #sobre h1 {
@@ -43,7 +46,7 @@ h1 {
 
 ul {
     min-height: 200px;
-    padding: 25px;
+    padding: 15px;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -51,7 +54,7 @@ ul {
     flex-direction: column;
     background-color: white;
     width: 25%;
-    border-radius: 25px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     gap: 10px;
     min-width: fit-content;
@@ -59,8 +62,8 @@ ul {
 
 ul li button, .backToMenu {
     background-color: darkgreen;
-    color: white;
-    width: 200px;
+    color: rgb(255, 255, 255);
+    width: 300px;
     height: 50px;
     font-size: 24px;
     border-radius: 8px;
@@ -74,16 +77,16 @@ ul li button, .backToMenu {
 
 ul li button:hover, .backToMenu:hover {
     background-color: #064d06;
-    width: 210px;
+    width: 310px;
 }
 
 .typing-text {
-    border-right: 2px solid black;
+    border-right: 2px solid rgb(255, 255, 255);
     white-space: nowrap;
     overflow: hidden;
     animation:
-        typing 3.5s steps(40, end),
-        blink-caret 0.75s step-end infinite;
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
 }
 
 .carousel {
@@ -94,9 +97,9 @@ ul li button:hover, .backToMenu:hover {
 }
 
 .carouselContent {
-    width: 60%;
+    width: 100%;
     padding: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.63);
     border-radius: 25px;
     height: 80%;
 }
@@ -109,10 +112,18 @@ ul li button:hover, .backToMenu:hover {
     gap: 10px;
 }
 
+.imgContainer {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carouselContent div img {
     width: 100%;
-    aspect-ratio: 4 / 5;
-    border-radius: 25px;
 }
 
 .carouselContent div p {
@@ -149,13 +160,17 @@ ul li button:hover, .backToMenu:hover {
     color: white;
 }
 
+.info img {
+    margin-top: 30px;
+}
+
 @keyframes typing {
     from {
         width: 0
     }
 
     to {
-        width: 35%
+        width: 36%
     }
 }
 

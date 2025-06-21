@@ -1,5 +1,5 @@
 function showPage(id) {
-    const ids = ["jogar", "sobre", "ajuda", "menu"]
+    const ids = ["jogar", "sobre", "ajuda", "menu", "opcoes"]
     const idsWithoutCurrentId = ids.filter(item => item != id)
     const pageToOpen = document.getElementById(id)
 
