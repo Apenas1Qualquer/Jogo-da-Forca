@@ -177,6 +177,7 @@ h1 {
 
 .topicGroup {
     width: 100%;
+    color: white;
 }
 
 @keyframes typing {
