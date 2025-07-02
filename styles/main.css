@@ -24,6 +24,7 @@ main {
 }
 
 #ajuda, #sobre, #jogar, #opcoes {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -33,6 +34,12 @@ main {
 
 #sobre {
     width: 40%;
+}
+#ajuda {
+    font-size: x-large;
+    color: white;     
+    display:flex ;
+    width: 100%;
 }
 
 #sobre h1 {
@@ -44,7 +51,7 @@ h1 {
     color: white;
 }
 
-ul {
+#sobre ul, #menu ul {
     min-height: 200px;
     padding: 15px;
     list-style-type: none;
@@ -60,7 +67,7 @@ ul {
     min-width: fit-content;
 }
 
-ul li button, .backToMenu {
+#sobre ul li button, #menu ul li button, .backToMenu {
     background-color: darkgreen;
     color: rgb(255, 255, 255);
     width: 300px;
@@ -75,7 +82,7 @@ ul li button, .backToMenu {
     font-style: normal;
 }
 
-ul li button:hover, .backToMenu:hover {
+#sobre ul li button:hover, #menu ul li button:hover, .backToMenu:hover {
     background-color: #064d06;
     width: 310px;
 }
@@ -162,6 +169,14 @@ ul li button:hover, .backToMenu:hover {
 
 .info img {
     margin-top: 30px;
+}
+.topics {
+    color: black;
+    display: flex;
+}
+
+.topicGroup {
+    width: 100%;
 }
 
 @keyframes typing {

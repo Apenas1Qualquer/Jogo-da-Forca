@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Jogo da Forca</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
     <main>
         <div id="menu" style="display: flex;">
@@ -26,23 +28,59 @@
         </div>
         <div id="opcoes" style="display: none;">
             <h1>Opções</h1>
-             <div>
-            <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
-        </div>
+            <div>
+                <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
+            </div>
         </div>
 
         <div id="jogar" style="display: none;">
             <h1>Jogar</h1>
-             <div>
-            <button onclick="showPage('menu')" class="backToMenu">Sair</button>
-        </div>
+            <div>
+                <button onclick="showPage('menu')" class="backToMenu">Sair</button>
+            </div>
         </div>
 
         <div id="ajuda" style="display: none;">
             <h1>Ajuda</h1>
-        <div>
-            <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
-        </div>
+            <h2> Regras</h2>
+
+            <div class="topics">
+                <ul class="topicGroup">
+                    <h2>Regras</h2>
+
+                    <li> As palavras terão de 6 a 8 letras </li>
+                    <li> Observe o tamanho das palvras e tente imaginar padrões</li>
+                    <li> Responder com base no tema</li>
+                </ul>
+
+                <ul class="topicGroup">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dignissimos eligendi sed magnam
+                        quo. Aliquid quidem, recusandae tempora laborum ad libero quibusdam tenetur odio ratione
+                        officiis, quas optio cumque nihil?</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, nesciunt? Praesentium accusamus
+                        aperiam possimus mollitia saepe dolorum nesciunt, ut velit at, numquam nulla. Iste quia aliquam
+                        nesciunt, accusamus fugiat dolores.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus laudantium quisquam quaerat quas
+                        cumque deleniti? Modi ex repellendus architecto repudiandae aperiam vero molestiae libero
+                        laudantium quibusdam? Tenetur corporis deserunt dolore?</li>
+                </ul>
+
+                <ul class="topicGroup">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ex numquam hic maxime totam
+                        deleniti, sequi, consequatur maiores asperiores quidem nobis deserunt nulla. Voluptatem quasi ea
+                        quis neque qui numquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, illum vel. Laborum nulla hic
+                        temporibus totam nesciunt, sint praesentium ducimus? Architecto iure est autem ipsum eius
+                        debitis provident porro ratione.</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero quo voluptatum omnis excepturi
+                        et, ea at unde reprehenderit, adipisci nisi eos voluptate cum aspernatur natus quam odio sint.
+                        Atque, iusto.</li>
+                </ul>
+            </div>
+
+            <div>
+                <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
+            </div>
         </div>
 
         <div id="sobre" style="display: none;">
@@ -127,7 +165,7 @@
                 <button onclick="carousel('next')">⟫</button>
             </div>
 
-            <div class="info">   
+            <div class="info">
                 <img src="./public/logo-ponto-cidado.png" alt="">
                 <h2>Curso: Desenvolvimento Web</h2>
                 <h2>Professor: Fábio Fraga</h2>
@@ -140,4 +178,5 @@
     </main>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
