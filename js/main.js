@@ -1,3 +1,4 @@
+// Mostrar e sumir as páginas
 function showPage(id) {
     const ids = ["jogar", "sobre", "ajuda", "menu", "opcoes"]
     const idsWithoutCurrentId = ids.filter(item => item != id)
@@ -10,6 +11,7 @@ function showPage(id) {
     pageToOpen.style.display = "flex"
 }
 
+// Carrosel da página sobre
 function carousel(direction) {
     const ids = ["fabricio", "sara", "renato", "diego", "maria"]
     let currentIndex = 0
@@ -32,3 +34,120 @@ function carousel(direction) {
     previousPerson.style.display = "none"
     personToDisplay.style.display = "flex"
 }
+
+const palavras = ["DESAFIO", "TECNOLOGIA", "PROGRAMAR", "QUIMICA", "JAVASCRIPT"];
+
+let palavraSelecionada = "";
+let letrasCertas = [];
+let letrasErradas = [];
+let tentativasRestantes = 6;
+
+function showPage(pageId) {
+    const pages = ['menu', 'jogar', 'ajuda', 'sobre', 'opcoes'];
+    pages.forEach(id => {
+        document.getElementById(id).style.display = id === pageId ? 'flex' : 'none';
+    });
+
+    if (pageId === 'jogar') {
+        iniciarJogo();
+    }
+}
+
+// Iniciar novo jogo
+function iniciarJogo() {
+    palavraSelecionada = palavras[Math.floor(Math.random() * palavras.length)];
+    letrasCertas = [];
+    letrasErradas = [];
+    tentativasRestantes = 6;
+
+    atualizarPalavra();
+    atualizarLetrasErradas();
+    atualizarBoneco();
+
+    const input = document.querySelector(".entradaLetra input");
+    const botao = document.querySelector(".entradaLetra button");
+
+    input.disabled = false;
+    botao.disabled = false;
+
+    botao.onclick = tentarLetra;
+    input.value = "";
+    input.focus();
+}
+
+// Atualiza exibição da palavra
+function atualizarPalavra() {
+    const display = palavraSelecionada.split('').map(letra =>
+        letrasCertas.includes(letra) ? letra : "_"
+    ).join(" ");
+
+    document.querySelector(".palavraSecreta").textContent = display;
+}
+
+// Atualiza letras erradas
+function atualizarLetrasErradas() {
+    document.querySelector(".letrasErradas").textContent =
+        "Letras erradas: " + letrasErradas.join(", ");
+}
+
+// Mostra partes do boneco
+function atualizarBoneco() {
+    const partes = [
+        ".cabeca", ".tronco",
+        ".braco.esquerdo", ".braco.direito",
+        ".perna.esquerda", ".perna.direita"
+    ];
+
+    partes.forEach((seletor, index) => {
+        document.querySelector(seletor).style.display =
+            index < (6 - tentativasRestantes) ? "block" : "none";
+    });
+}
+
+// Processa a letra tentada
+function tentarLetra() {
+    const input = document.querySelector(".entradaLetra input");
+    const letra = input.value.toUpperCase();
+
+    if (!letra || letrasCertas.includes(letra) || letrasErradas.includes(letra)) {
+        input.value = "";
+        return;
+    }
+
+    if (palavraSelecionada.includes(letra)) {
+        letrasCertas.push(letra);
+    } else {
+        letrasErradas.push(letra);
+        tentativasRestantes--;
+    }
+
+    input.value = "";
+    input.focus();
+
+    atualizarPalavra();
+    atualizarLetrasErradas();
+    atualizarBoneco();
+
+    verificarFimDeJogo();
+}
+
+// Verifica vitória ou derrota
+function verificarFimDeJogo() {
+    const ganhou = palavraSelecionada.split('').every(l => letrasCertas.includes(l));
+    if (ganhou) {
+        setTimeout(() => {
+            alert("Parabéns! Você venceu!");
+            iniciarJogo();
+        }, 100);
+    } else if (tentativasRestantes <= 0) {
+        setTimeout(() => {
+            alert(`Você perdeu! A palavra era:${palavraSelecionada}`);
+            iniciarJogo();
+        }, 100);
+    }
+}
+
+// Ao carregar página, limpa boneco
+document.addEventListener("DOMContentLoaded", () => {
+    atualizarBoneco();
+});
