@@ -65,12 +65,9 @@ function iniciarJogo() {
     atualizarBoneco();
 
     const input = document.querySelector(".entradaLetra input");
-    const botao = document.querySelector(".entradaLetra button");
 
     input.disabled = false;
-    botao.disabled = false;
 
-    botao.onclick = tentarLetra;
     input.value = "";
     input.focus();
 }
@@ -105,12 +102,15 @@ function atualizarBoneco() {
 }
 
 // Processa a letra tentada
-function tentarLetra() {
-    const input = document.querySelector(".entradaLetra input");
-    const letra = input.value.toUpperCase();
+function tentarLetra(event) {
+    event.preventDefault()
+
+    const form = new FormData(event.target)
+    const letra = form.get('letra').toUpperCase()
 
     if (!letra || letrasCertas.includes(letra) || letrasErradas.includes(letra)) {
-        input.value = "";
+        event.target.children[0].value = "";
+
         return;
     }
 
@@ -121,8 +121,8 @@ function tentarLetra() {
         tentativasRestantes--;
     }
 
-    input.value = "";
-    input.focus();
+    event.target.children[0].value = "";
+    event.target.children[0].focus();
 
     atualizarPalavra();
     atualizarLetrasErradas();

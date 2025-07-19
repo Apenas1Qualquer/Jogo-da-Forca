@@ -66,10 +66,10 @@
             <div class="palavraSecreta">
             </div>
 
-            <div class="entradaLetra">
-                <input type="text" maxlength="1" placeholder="Digite uma letra" disabled>
-                <button disabled>Tentar</button>
-            </div>
+            <form onsubmit="tentarLetra(event)" class="entradaLetra" id="form">
+                <input type="text" name="letra" maxlength="1" placeholder="Digite uma letra" disabled>
+                <button type="submit">Tentar</button>
+            </form>
 
             <div class="letrasErradas">
                 Letras erradas: 
@@ -153,7 +153,7 @@
                         <div class="imgContainer">
                             <img src="./public/Maria.jpg" alt="Maria">
                         </div>
-                        <h2>Maria i</h2>
+                        <h2>Maria Islaine</h2>
                         <p>👩🏻 23 anos</p>
                         <p>
                             <a href="http://wa.me/5581984797851" target="_blank" rel="noopener">

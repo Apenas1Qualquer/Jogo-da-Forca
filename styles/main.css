@@ -168,7 +168,7 @@ main {
     border-radius: 5px;
     background-color: darkgreen;
     color: white;
-    cursor: not-allowed;
+    cursor:pointer
 }
 
 .letrasErradas {
