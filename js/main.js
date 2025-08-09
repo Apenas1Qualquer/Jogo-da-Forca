@@ -35,7 +35,8 @@ function carousel(direction) {
     personToDisplay.style.display = "flex"
 }
 
-const palavras = ["DESAFIO", "TECNOLOGIA", "PROGRAMAR", "QUIMICA", "JAVASCRIPT"];
+// PALAVRAS SECRETAS
+const palavras = ["JAVASCRIPT", "FUNÇÃO", "PARÂMETRO", "VARIÁVEL", "CONSTANTE", "LOOP", "ARRAY"];
 
 let palavraSelecionada = "";
 let letrasCertas = [];
@@ -78,7 +79,7 @@ function atualizarPalavra() {
         letrasCertas.includes(letra) ? letra : "_"
     ).join(" ");
 
-    document.querySelector(".palavraSecreta").textContent = display;
+    document.querySelector(".palavras").textContent = display;
 }
 
 // Atualiza letras erradas

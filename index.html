@@ -31,13 +31,15 @@
                         <div id="tema-selector">
                 <label for="tema">Escolha um tema:</label>
                 <select id="tema">
-                    <option value="frutas">Frutas</option>
-                    <option value="animais">Animais</option>
-                    <option value="paises">Países</option>
-                    <option value="profissoes">Profissões</option>
+                    <option value="javascript">Programação</option>
+                    <option value="hmtl">Html</option>
                 </select>
                 <button onclick="salvarTema()">Salvar Tema</button>
             </div>
+
+            <audio controls loop>
+                <source src="./public/Beethoven - Moonlight Sonata (FULL).mp3">
+            </audio>
 
             <div>
                 <button onclick="showPage('menu')" class="backToMenu">Voltar</button>
@@ -63,7 +65,7 @@
         </div>
 
         <div class="areaJogo">
-            <div class="palavraSecreta">
+            <div class="palavras">
             </div>
 
             <form onsubmit="tentarLetra(event)" class="entradaLetra" id="form">
