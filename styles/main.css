@@ -14,6 +14,17 @@ main {
     align-items: center;
 }
 
+#tema-selector {
+    color: white;
+    padding: 15px;
+}
+
+#tema, #tema-selector button {
+    border-radius: 10px;
+    border: 1px;
+    font-family: "Fredericka the Great", cursive;
+}
+
 .boneco div {
     display: none;
 }
@@ -148,6 +159,7 @@ main {
     font-size: 40px;
     letter-spacing: 12px;
 }
+
 
 .entradaLetra input {
     font-size: 20px;
