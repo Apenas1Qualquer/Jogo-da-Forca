@@ -109,7 +109,7 @@ main {
     width: 30px;
     height: 2px;
     background-color: white;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
     transform-origin: top left;
 }
 
@@ -120,7 +120,7 @@ main {
     width: 30px;
     height: 2px;
     background-color: white;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
     transform-origin: top right;
 }
 
@@ -131,7 +131,7 @@ main {
     width: 30px;
     height: 2px;
     background-color: white;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
     transform-origin: top left;
 }
 
@@ -142,7 +142,7 @@ main {
     width: 30px;
     height: 2px;
     background-color: white;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
     transform-origin: top right;
 }
 
