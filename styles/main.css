@@ -105,45 +105,45 @@ main {
 .boneco .braco.esquerdo {
     position: absolute;
     top: 85px;
-    left: 112px;
+    left: 140px;
     width: 30px;
     height: 2px;
     background-color: white;
     transform: rotate(45deg);
-    transform-origin: top left;
+    transform-origin: left;
 }
 
 .boneco .braco.direito {
     position: absolute;
     top: 85px;
+    left: 112px;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(-45deg);
+    transform-origin: right;
+}
+
+.boneco .perna.esquerda {
+    position: absolute;
+    top: 125px;
     left: 140px;
     width: 30px;
     height: 2px;
     background-color: white;
     transform: rotate(-45deg);
-    transform-origin: top right;
+    transform-origin: left;
 }
 
-.boneco .perna.esquerda {
+.boneco .perna.direita {
     position: absolute;
     top: 125px;
     left: 112px;
     width: 30px;
     height: 2px;
     background-color: white;
-    transform: rotate(-45deg);
-    transform-origin: top left;
-}
-
-.boneco .perna.direita {
-    position: absolute;
-    top: 125px;
-    left: 140px;
-    width: 30px;
-    height: 2px;
-    background-color: white;
     transform: rotate(45deg);
-    transform-origin: top right;
+    transform-origin: right;
 }
 
 .areaJogo {
