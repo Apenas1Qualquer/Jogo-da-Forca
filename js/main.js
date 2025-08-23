@@ -108,9 +108,10 @@ function tentarLetra(event) {
 
     const form = new FormData(event.target)
     const letra = form.get('letra').toUpperCase()
+    const isLetterRegex = /^[A-Za-zÀ-ÿ]+$/
 
-    if (!letra || letrasCertas.includes(letra) || letrasErradas.includes(letra)) {
-        event.target.children[0].value = "";
+    if (!isLetterRegex.test(letra) || !letra || letrasCertas.includes(letra) || letrasErradas.includes(letra)) {
+        event.target.children[1].value = "";
 
         return;
     }
@@ -122,8 +123,8 @@ function tentarLetra(event) {
         tentativasRestantes--;
     }
 
-    event.target.children[0].value = "";
-    event.target.children[0].focus();
+    event.target.children[1].value = "";
+    event.target.children[1].focus();
 
     atualizarPalavra();
     atualizarLetrasErradas();
@@ -137,12 +138,19 @@ function verificarFimDeJogo() {
     const ganhou = palavraSelecionada.split('').every(l => letrasCertas.includes(l));
     if (ganhou) {
         setTimeout(() => {
-            alert("Parabéns! Você venceu!");
-            iniciarJogo();
+            if (window.confirm("Parabéns! Você venceu!")) {
+                iniciarJogo();
+            } else {
+                window.location.reload()
+            }
         }, 100);
     } else if (tentativasRestantes <= 0) {
         setTimeout(() => {
-            alert(`Você perdeu! A palavra era:${palavraSelecionada}`);
+            if (window.confirm(`Você perdeu! A palavra era: ${palavraSelecionada}. Deseja continuar?`)) {
+                iniciarJogo();
+            } else {
+                window.location.reload()
+            }
             iniciarJogo();
         }, 100);
     }

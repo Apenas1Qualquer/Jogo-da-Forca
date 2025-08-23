@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Jogo da Forca</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./public//favicon.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -28,14 +29,14 @@
         </div>
         <div id="opcoes" style="display: none;">
             <h1>Opções</h1>
-                        <div id="tema-selector">
+            <!-- <div id="tema-selector">
                 <label for="tema">Escolha um tema:</label>
                 <select id="tema">
                     <option value="javascript">Programação</option>
                     <option value="hmtl">Html</option>
                 </select>
                 <button onclick="salvarTema()">Salvar Tema</button>
-            </div>
+            </div> -->
 
             <audio controls loop>
                 <source src="./public/Beethoven - Moonlight Sonata (FULL).mp3">
@@ -48,36 +49,39 @@
 
         <div id="jogar" style="display: none;">
             <h1>Jogo da Forca</h1>
-             <div class="forcaContainer">
-        <div class="forcaDesenho">
-            <div class="poste"></div>
-            <div class="base"></div>
-            <div class="haste"></div>
-            <div class="corda"></div>
-            <div class="boneco">
-                <div class="cabeca"></div>
-                <div class="tronco"></div>
-                <div class="braco esquerdo"></div>
-                <div class="braco direito"></div>
-                <div class="perna esquerda"></div>
-                <div class="perna direita"></div>
-            </div>
-        </div>
+            <h4>Dica: Programação</h4>
 
-        <div class="areaJogo">
-            <div class="palavras">
-            </div>
+            <div class="forcaContainer">
+                <div class="forcaDesenho">
+                    <div class="poste"></div>
+                    <div class="base"></div>
+                    <div class="haste"></div>
+                    <div class="corda"></div>
+                    <div class="boneco">
+                        <div class="cabeca"></div>
+                        <div class="tronco"></div>
+                        <div class="braco esquerdo"></div>
+                        <div class="braco direito"></div>
+                        <div class="perna esquerda"></div>
+                        <div class="perna direita"></div>
+                    </div>
+                </div>
 
-            <form onsubmit="tentarLetra(event)" class="entradaLetra" id="form">
-                <input type="text" name="letra" maxlength="1" placeholder="Digite uma letra" disabled>
-                <button type="submit">Tentar</button>
-            </form>
+                <div class="areaJogo">
+                    <div class="palavras">
+                    </div>
 
-            <div class="letrasErradas">
-                Letras erradas: 
+                    <form onsubmit="tentarLetra(event)" class="entradaLetra" id="form">
+                        <label for="letter">Inserir letra: </label>
+                        <input id="letter" type="text" name="letra" maxlength="1" disabled>
+                        <button type="submit">Tentar</button>
+                    </form>
+
+                    <div class="letrasErradas">
+                        Letras erradas:
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
             <div>
                 <button onclick="showPage('menu')" class="backToMenu">Sair</button>
@@ -87,30 +91,33 @@
         <div id="ajuda" style="display: none;">
             <h1>Ajuda</h1>
             <div class="topics">
-                <ul class="topicGroup">
-                    <h2>Regras</h2>
-                    <li>As palavras terão de 6 a 8 letras </li>
-                    <li>Observe o tamanho das palvras e tente imaginar padrões</li>
-                    <li>Responder com base no tema</li>
-                    <li>Serão 6 chances, a cada erro o boneco será formado </li>
-                    <li>Você podera escolher um tema entre os que estarão disponiveis, ou deixar que o jogo comece de
-                        forma aleatória </li>
-                </ul>
-                <ul class="topicGroup">
-                    <h2>Características</h2>
-                    <li>Adivinhar a palavra secreta</li>
-                    <li>Dica baseado na quantidade de letras</li>
-                    <li>A cada letra errada, uma parte do boneco é desenhada</li>
-                </ul>
+                <div>
+                    <h2 class="title">Regras</h2>
+                    <ul class="topicGroup">
+                        <li>As palavras terão de 6 a 8 letras </li>
+                        <li>Observe o tamanho das palvras e tente imaginar padrões</li>
+                        <li>Responder com base no tema</li>
+                        <li>Serão 6 chances, a cada erro o boneco será formado </li>
+                        <li>Você podera escolher um tema entre os que estarão disponiveis, ou deixar que o jogo comece
+                            de
+                            forma aleatória </li>
+                    </ul>
+                </div>
 
-                <ul class="topicGroup">
-                    <h2>Suporte</h2>
-                    <li>Algum erro no jogo?</li>
-                    <li>Contato:</li>
-                    <li>
-                        <a class="email" href="mailto:contatojogodaforca01@gmail.com">contatojogodaforca01@gmail.com</a>
-                    </li>
-                </ul>
+                <div>
+                    <h2 class="title">Características</h2>
+                    <ul class="topicGroup">
+                        <li>Adivinhar a palavra secreta</li>
+                        <li>Dica baseado na quantidade de letras</li>
+                        <li>A cada letra errada, uma parte do boneco é desenhada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="title contact">
+                <h2>Suporte</h2>
+                <p>Algum erro no jogo? Entre em contato através do e-mail <a
+                        href="mailto:contatojogodaforca01@gmail.com">contatojogodaforca01@gmail.com</a>.</p>
             </div>
 
             <div>
