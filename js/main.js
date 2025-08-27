@@ -21,13 +21,15 @@ function carousel(direction) {
             currentIndex = ids.indexOf(id)
         }
     }
-    let nextIndex = 0    
-    if (direction == "prev" && currentIndex > 0) {
+    let nextIndex = 0 
+
+    if (direction == "prev" && currentIndex === 0) {
+        nextIndex = ids.length - 1
+    } else if (direction == "prev" && currentIndex > 0) {
         nextIndex = currentIndex - 1
-    } else if (direction == "next" && currentIndex < ids.length - 1){
+    } 
+    else if (direction == "next" && currentIndex < ids.length - 1){
         nextIndex = currentIndex + 1
-    } else {
-        return
     }
     const personToDisplay = document.getElementById(ids[nextIndex])
     const previousPerson = document.getElementById(ids[currentIndex])
